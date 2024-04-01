@@ -1,0 +1,42 @@
+.headerContainerMain {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 2rem 0rem 2rem;
+  }
+  
+  .headerContainerMain::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #ECE6DA;
+    opacity: .1;
+  }
+  
+  .headerLogoMain {
+    padding: 1rem 0;
+    color:  var(--clr-accent-primary);
+    font-size: 24px; 
+    text-decoration: none;
+    
+  }
+
+  .headerFlexColumn {
+    display: flex;
+  }
+
+  .headerContainerNav {
+    margin-left: auto;
+  }
+
+  .navLink {
+    text-decoration: none;
+    color:  var(--clr-accent-primary);
+  }
+
+  .headerFlexColumn li + li {
+    margin-left: 3rem;
+  }
