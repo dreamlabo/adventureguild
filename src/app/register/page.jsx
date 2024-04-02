@@ -22,7 +22,7 @@ export default function Register() {
           <button className="form-registration-button">Submit</button>
           <div className="form-registration-text--container">
             <p>Already have an account? </p>
-            <Link className="form-registration-link-text" href="signin">Signin</Link>
+            <Link className="form-registration-link-text" href="/signin">Signin</Link>
           </div>
         </form>
       </div>

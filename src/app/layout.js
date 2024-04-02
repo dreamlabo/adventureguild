@@ -1,8 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import HeaderMain from '@/components/layoutComponents/header/HeaderMain'
+import { cinzel, roboto } from './fonts/fonts';
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Adventure Guild",
@@ -11,8 +12,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${cinzel.variable} ${roboto.variable}  `}>
+      <body >
         <HeaderMain />
           {children}
         </body>
