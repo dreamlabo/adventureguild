@@ -6,7 +6,7 @@ import style from './header.module.css';
 
 export default function HeaderMain() {
   return (
-    <div className='page-wrapper'>
+    <div className={style.headerMainWrapper}>
       <header className={style.headerContainerMain}>
           <Link href="/" className={style.headerLogoMain}>Adventure Guild</Link>
           <nav className={style.headerContainerNav}>
