@@ -6,9 +6,9 @@ export default function Register() {
   return (
     <div className="registration-page-wrapper">
       <Image className="imageContainer--background" src={WizardImage} />
-      <div className="relative">
+      <div className="image-full-screen-container">
         <Image className="imageContainer" src={WizardImage} />
-        <div className="absolute"></div>
+        <div className="overlay-of-image"></div>
       </div>
       <div className="form-registration-container">
         <form className="form-registration" action="">
