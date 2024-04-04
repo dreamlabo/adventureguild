@@ -1,5 +1,6 @@
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "./globals.css";
+import AuthProvider from "@/components/auth/AuthProvider";
 import HeaderMain from '@/components/layoutComponents/header/HeaderMain'
 import { cinzel, roboto } from './fonts/fonts';
 
@@ -13,10 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cinzel.variable} ${roboto.variable}  `}>
-      <body >
-        <HeaderMain />
+      
+      <AuthProvider>
+        <body >
+          <HeaderMain />
           {children}
         </body>
+      </AuthProvider>
     </html>
   );
 }

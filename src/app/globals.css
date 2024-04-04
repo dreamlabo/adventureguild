@@ -7,9 +7,12 @@
 }
 
 :root {
+  --clr-light-100: #ECE6DA;
   --clr-accent-primary: #BB883A;
   --clr-header: #0B0912;
   --clr-accent-red: #742F2C;
+
+  --clr-error-message: #e17f7a;
 
   --clr-background-registration: #081325;
 }
@@ -44,7 +47,7 @@ li {
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: #ECE6DA;
+  background-color: var(--clr-light-100);
   opacity: .1;
 }
 
@@ -56,7 +59,7 @@ li {
 
 /* Registration page */
 .registration-page-wrapper {
-  height: calc(100vh - 61px);
+  height: calc(100vh - 64px);
   min-height: 450px;
   background: var(--clr-background-registration);
   display: grid;
@@ -70,7 +73,7 @@ li {
 }
 
 .imageContainer {
-  height: calc(100vh - 61px);
+  height: calc(100vh - 64px);
   min-height: 450px;
   width: 100%;
   max-width: 1000px;
@@ -95,11 +98,12 @@ li {
 /* Registration Form */
 .form-registration-container {
   position: relative;
-  padding: 1rem 1rem;
+  padding: 1.3rem 1.3rem;
   width: clamp(300px, 80%, 500px);
   background: #08101F;
   border-radius: 5px;
-  box-shadow: 1px 1px 8px 4px rgba(67, 68, 70, 0.2)
+  /* border: 1px solid white; */
+  box-shadow: 1px 1px 15px 4px rgba(176, 192, 224, 0.15)
 }
 
 @media screen and (min-width: 2000px) {
@@ -108,26 +112,26 @@ li {
   }
 }
 
-.form-registration-container::before {
+.form-registration-container::before,
+.form-registration-container::after {
   content: "";
   position: absolute;
+  background: var(--clr-accent-red); 
+  opacity: 0.7;
+}
+
+.form-registration-container::before {
   left:-25px;
   top: -15px;
   width: 50%;
   height: 1px;
-  background: var(--clr-accent-red); 
-  opacity: 0.3;
 }
 
 .form-registration-container::after {
-  content: "";
-  position: absolute;
   left:-15px;
   top: -25px;
   width: 1px;
   height: 50%;
-  background: var(--clr-accent-red);  
-  opacity: 0.3 ;
 }
 
 @media screen and (max-width: 750px) {
@@ -168,17 +172,38 @@ li {
   font-family: var(--font-roboto);
 }
 
+.form-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .form-registration-header {
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.3rem;
   font-size: 2rem;
-  color: #ECE6DA;
+  color: var(--clr-light-100);
   font-weight: 400;
   font-family: var(--font-cinzel);
 }
 
+.form-error-message {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--clr-error-message, red);
+  font-size: 14px;
+  font-weight: 300;
+
+}
+
+.form-error-message span {
+  padding-top: 1px;
+  margin-left: 7px;
+}
+
 .form-registration-label {
   padding-bottom: 8px;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #EFF9FB;
   text-transform: uppercase;
@@ -187,11 +212,11 @@ li {
 
 .form-registration-input {
   padding: .5rem .5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.3rem;
   border-radius: 5px;
   background: #141D2D;
   border: none;
-  color: #ECE6DA;
+  color: var(--clr-light-100);
   font-size: 1rem;
   font-family: var(--font-roboto);
 }
@@ -205,7 +230,7 @@ li {
   font-size: 24px; 
   font-family: var(--font-cinzel);
   font-weight: 600;
-  color: #ECE6DA;
+  color: var(--clr-light-100);
   cursor: pointer;
 }
 
@@ -220,12 +245,12 @@ li {
   align-items: center;;
   gap: 5px;
   padding-top: 0.5rem;
-  color: #ECE6DA;
+  color: var(--clr-light-100);
   font-size: 14px;
 }
 
 .form-registration-link-text {
-  color: #ECE6DA;
+  color: var(--clr-light-100);
   text-decoration: none;
 }
 
