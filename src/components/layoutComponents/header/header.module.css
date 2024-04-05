@@ -74,3 +74,154 @@
   .headerFlexColumn li + li {
     margin-left: 1rem;
   }
+
+  .iconButtonContainer {
+    position: relative;
+  }
+
+  .iconButton {
+
+    cursor: pointer;
+    background: inherit;
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 20px; */
+    transition: background-color 150ms ease-in-out;
+    
+  }
+
+  .iconButton:hover {
+    background-color: rgba(115, 111, 127, 0.5);
+
+  }
+
+  .iconButton span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95;
+    background: var(--clr-accent-red );
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    /* text-align: center; */
+    color: var(--clr-light-100);
+  }
+
+  .userIconDropdownWrapper {
+    position: absolute;
+    min-width: 280px;
+    width: max-content;
+    top: calc(100% - 5px);
+    right: 0;
+    background: #0B0912;
+    border-radius: 5px;
+    border: 1px solid var(--clr-light-100-border-rgba);
+    /* box-shadow: 0px 0px 0px 1px #39424a, 0px 8px 12px #0304045C, 0px 0px 1px 1px #03040480; */
+    z-index: 20;
+    opacity: 0;
+    animation: dropdownAnimate 100ms ease-in forwards;
+  }
+  @keyframes dropdownAnimate  {
+    to {
+      opacity: 1;
+      top: calc(100% + 7px)
+    }
+    
+  }
+
+  .userIconDropdown {
+    padding: 0rem 0;
+    font-family: var(--font-roboto);
+    color: var(--clr-light-100)
+  }
+
+  .dropdownInnerSection {
+    position: relative;
+    padding: 1rem 1rem .5rem 1rem;
+  }
+
+  .dropdownInnerSection:not(:first-of-type)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 1px;
+    background: var(--clr-light-100-border-rgba);
+    /* opacity: 0.7; */
+  }
+
+  .dropdownInnerSection h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+    
+  }
+
+  .userInfoContainer {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 45px 1fr;
+  }
+
+  .usernameText {
+    text-transform: uppercase;
+    font-size: 14px;
+   
+  }
+
+  .emailText {
+    font-size: 11px;
+    font-weight: 300;
+
+  }
+
+  .userInfoIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-accent-red );
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    /* text-align: center; */
+    color: var(--clr-light-100);
+  }
+  .userInfoTextContainer {
+   align-self: center;
+
+  }
+
+  .signOutButton {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-accent-red);
+    margin-bottom: 11px;
+  }
+
+
+
+  
+
+  /* .iconButton::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+  
+    width: 50px;
+    height: 50px;
+    transform: translate(50%, -50%);
+    background: blue;
+    border-radius: 50px;
+    opacity: 1;
+    z-index: -1;
+    ;
+
+  } */

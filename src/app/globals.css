@@ -9,6 +9,8 @@
 :root {
   --clr-light-100: #ECE6DA;
   --clr-accent-primary: #BB883A;
+  --clr-accent-primary-rgb: rgb(187, 136, 58);
+  --clr-light-100-border-rgba: rgba(236, 230, 218, 0.3);
   --clr-header: #0B0912;
   --clr-accent-red: #742F2C;
 

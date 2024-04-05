@@ -15,38 +15,37 @@ export default function SignIn() {
 
     const router = useRouter();
     
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("")
-       
       
-          const res = await signIn("credentials", {
+    const res = await signIn("credentials", {
             email,
             password,
             callbackUrl: '/',
             redirect: false
           });
-          // console.log('res', res)
-    
+      
           if (res?.error) {
               setError("Invalid Credentials");
               return;
           }
 
-        
-          
-   
         if (res?.ok) {
-          console.log("res", res)
           router.refresh();
           router.push(res.url)
         }
-      };
+    };
 
     return (
         <div className="registration-page-wrapper">
-            <Image className="imageContainer--background" src={WizardImage} alt="wizard juggling" />
+            <Image 
+                src={WizardImage} 
+                alt="wizard juggling" 
+                priority={true} 
+                quality={100} 
+                className="imageContainer--background" 
+            />
             <div className="image-full-screen-container">
                 <Image className="imageContainer" src={WizardImage} alt="wizard juggling" />
                 <div className="overlay-of-image"></div>
@@ -55,33 +54,32 @@ export default function SignIn() {
                 <form onSubmit={handleSubmit} className="form-registration" action="">
                   <div className='form-header-container'>
                     <h1 className="form-registration-header">Signin</h1>
-                  {error && <p className='form-error-message'>
-                              <PiWarningCircleLight style={{fontSize: '20px',}}/>
-                              <span>Invalid Credentials</span>
-                            </p> 
-                              }
-       
+                    {error && <p className='form-error-message'>
+                                <PiWarningCircleLight style={{fontSize: '20px',}}/>
+                                <span>Invalid Credentials</span>
+                              </p> 
+                    }
                   </div>
-                    <label className="form-registration-label"htmlFor="email">Email</label>
-                    <input 
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="form-registration-input"
-                        type="email"
-                        name='email' 
-                        value={email}
-                    />
-                    <label className="form-registration-label" htmlFor="password">Password</label>
-                    <input 
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="form-registration-input" 
-                        type="password" 
-                        value={password}
-                    />
-                    <button className="form-registration-button">Signin</button>
-                    <div className="form-registration-text--container">
-                        <p>Don&apos;t have an account? </p>
-                        <Link className="form-registration-link-text" href="/register">Register</Link>
-                    </div>
+                  <label className="form-registration-label"htmlFor="email">Email</label>
+                  <input 
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="form-registration-input"
+                      type="email"
+                      name='email' 
+                      value={email}
+                  />
+                  <label className="form-registration-label" htmlFor="password">Password</label>
+                  <input 
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="form-registration-input" 
+                      type="password" 
+                      value={password}
+                  />
+                  <button className="form-registration-button">Signin</button>
+                  <div className="form-registration-text--container">
+                      <p>Don&apos;t have an account? </p>
+                      <Link className="form-registration-link-text" href="/register">Register</Link>
+                  </div>
                 </form>
             </div>
         </div>

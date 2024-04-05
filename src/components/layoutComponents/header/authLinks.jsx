@@ -2,13 +2,14 @@
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import style from './header.module.css';
+import IconDropdown from './components/iconDropdown';
 
 
 export default function AuthLinks() {
     const {data: session}  = useSession();
   return (
     <>
-        {session?.user ?  <Link href="/api/auth/signout?callbackUrl=/">Logout</Link>
+        {session?.user ?  <IconDropdown/>
                           : 
                           <ul className={style.headerFlexColumn}>
                             <li><Link className={style.navLink} href="/signin">Sign In</Link></li>
@@ -19,3 +20,5 @@ export default function AuthLinks() {
     </>
   )
 }
+
+{/* <Link  href="/api/auth/signout?callbackUrl=/">Logout</Link> */}

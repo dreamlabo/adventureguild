@@ -20,35 +20,41 @@ export default function Register() {
       ...prevState,
       [name]: value
     }));
-};
+  };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  // if(!email || !password) {
-  //     return;
-  // }
-  setErrorMessage("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // if(!email || !password) {
+    //     return;
+    // }
+    setErrorMessage("");
 
-  const res = await fetch('/api/Users', {
-      method: "POST",
-      body: JSON.stringify({ formData }),
-      "content-type": "application/json",
-  });
+    const res = await fetch('/api/Users', {
+        method: "POST",
+        body: JSON.stringify({ formData }),
+        "content-type": "application/json",
+    });
 
-  if(!res.ok){
-      const response = await res.json();
-      setErrorMessage(response.message);
-  } else {
-      router.refresh();
-      router.push("/signin")
-  }
-};
+    if(!res.ok){
+        const response = await res.json();
+        setErrorMessage(response.message);
+    } else {
+        router.refresh();
+        router.push("/signin")
+    }
+  };
 
   return (
     <div className="registration-page-wrapper">
       <Image className="imageContainer--background" src={WizardImage} alt="wizard reading from book" />
       <div className="image-full-screen-container">
-        <Image className="imageContainer" src={WizardImage} alt="wizard reading from book" />
+        <Image 
+              src={WizardImage} 
+              alt="wizard reading from book" 
+              priority={true} 
+              quality={100} 
+              className="imageContainer" 
+        />
         <div className="overlay-of-image"></div>
       </div>
       <div className="form-registration-container">
