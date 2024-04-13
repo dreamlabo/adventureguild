@@ -10,7 +10,7 @@ import AuthLinks from './authLinks';
 
 export default async function HeaderMain() {
 
-  // const session = await getServerSession(options);
+ 
   // console.log("Session lkbkjbkbkb: ", session)
   return (
     <div className={style.headerMainWrapper}>

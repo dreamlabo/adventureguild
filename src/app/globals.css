@@ -6,12 +6,18 @@
   padding: 0;
 }
 
+body {
+  /* overflow: hidden; */
+}
+
 :root {
   --clr-light-100: #ECE6DA;
   --clr-accent-primary: #BB883A;
   --clr-accent-primary-rgb: rgb(187, 136, 58);
   --clr-light-100-border-rgba: rgba(236, 230, 218, 0.3);
   --clr-header: #0B0912;
+  --clr-components-sub-header: #7D67CD;
+  --clr-main-background: #0B0912;
   --clr-accent-red: #742F2C;
 
   --clr-error-message: #e17f7a;
@@ -22,6 +28,59 @@
 li {
   list-style: none;
 }
+
+.guild-member-page-layout-wrapper {
+  /* margin: 0 2rem 0 0; */
+  display: flex;
+  /* grid-template-columns: 255px 1fr; */
+  /* column-gap: 2rem; */
+  overflow: hidden;
+  /* max-height: calc(100% - 400px) ;  */
+
+}
+
+.right-side-outer-wrapper {
+  background: var(--clr-main-background);
+  width: 100%;
+  /* position: relative; */
+ 
+  /* border: 1px solid blue; */
+  max-height: calc(100vh - 64px);
+  height: calc(100vh - 64px);
+  /* overflow: hidden; */
+
+
+ 
+  
+}
+
+.right-side-inner-wrapper {
+ 
+  padding: 1rem;
+  width: calc(100% - 3rem);
+  min-height: calc(100vh - 64px);
+  height: calc(100vh - 64px);
+  overflow: hidden;
+
+}
+
+.right-side-inner-container {
+  /* height: calc(100vh - 0px);  */
+  /* display: flex;
+  flex-direction: column;
+  height: 100%;  */
+  /* overflow: scroll; */
+  /* overflow: hidden; */
+ 
+  
+
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 150px);
+}
+
+
 
 .page-wrapper {
   background: var(--clr-header);
@@ -285,3 +344,393 @@ li {
     font-size: 16px; 
   }
 }
+
+
+/* Side Nav Globals */
+.side-nav-wrapper {
+  --sidebar-width-full: 200px;
+  --sidebar-width-mobile: 65px;
+  background: #181325;
+  padding: 1rem 1rem 2rem 1rem;
+  min-height: calc(100vh - 64px);
+  height: calc(100vh - 64px);
+  font-family: var(--font-roboto);
+  transition: width 300ms ease;
+  width: var(--sidebar-width-full);
+  overflow: hidden auto;
+}
+
+.side-nav-wrapper.side-nav-wrapper--mobile {
+  width: var(--sidebar-width-mobile);
+
+
+}
+
+.span-text {
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  overflow-x: hidden;
+  /* padding-left: 1rem; */
+}
+
+
+
+.side-nav-wrapper.side-nav-wrapper--mobile .span-text {
+  opacity: 0;
+}
+
+.icon-container {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.side-nav--toggle-btn {
+  /* border: 1px solid red; */
+  /* text-align: right; */
+  margin-bottom: 2rem;
+}
+
+.side-nav--toggle-btn button {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  padding: .7rem .8rem;
+  text-decoration: none;
+  color: #BB883A;
+  white-space: nowrap;
+}
+
+.link:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 2px;
+  height: calc(100% - 20px);
+  background: #BB883A;
+}
+
+.link:hover {
+  background: #0B0912;
+}
+
+
+/* Guild Member Dashboard */
+
+.page-title-text {
+  color: var(--clr-accent-primary);
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: var(--font-roboto);
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  /* position: sticky;
+  top: 64px; */
+}
+
+
+.overview-components-header {
+  color: var(--clr-components-sub-header);
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-family: var(--font-roboto);
+}
+
+.overview-earnings-container {
+  padding: 1.3rem 1.25rem;
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  /* width: min(500px, 25vw); */
+  width: 100%;
+  background: #120F1D;
+  font-family: var(--font-roboto);
+  margin-bottom: 1rem;
+  
+}
+
+.overview-comp-earning-inner {
+  padding-top: 1rem;
+  /* padding-left: 1rem; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+.overview-comp-earning-inner h3 {
+  color: #75726B;
+  font-size: 14px;
+  text-transform: uppercase;
+
+}
+
+.overview-comp-earning-inner p {
+  color: #ECE6DA;
+  font-size: 20px;
+}
+
+.overview-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  /* border: 1px solid pink; */
+
+  /* flex: 0 0 auto; Prevent blocks from growing */
+   /* Example background color */
+  /* overflow: hidden; Hide overflow from blocks  */
+  /* Add any other styles as needed
+
+  /* flex: 0 0 auto;
+  overflow: hidden; */
+}
+
+.campaigns-by-region--wrapper {
+  
+  background: #120F1D;
+  padding: 1.3rem 1.25rem 0rem 1.25rem;
+}
+
+/* Campaign Invoices */
+.campaignInvoicesWrapper {
+  width: 100%;
+  background: #120F1D;
+  border-radius: 5px;
+  padding: 1rem;
+  font-family: var(--font-roboto);
+  /* min-height: 100%; */
+  /* min-height: 200px; */
+  /* overflow-y: scroll; */
+
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 150px); /* Set the container to take up the full viewport height */
+  /* border: 1px solid red; */
+}
+
+.upper-block {
+  /* border: 1px solid pink; */
+}
+
+.campaignDropdownContainer {
+  display: flex;
+}
+
+.campaignDropdown {
+  margin-left: auto;
+  
+}
+
+
+.campaignGrid {
+  padding-top: 1rem;
+
+  display: grid;
+  grid-template-columns: 
+                      [invoice id] 100px
+                      [status] 90px 
+                      [reason] 1fr 
+                      [location] 90px 
+                      [payment] 80px 
+                      [start date] 100px 
+                      [end date] 100px 
+                      [hired by] 120px;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.campaignGrid--headings {
+  font-size: 12px;
+  color: #75726B;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-transform: uppercase;
+}
+
+.campaignsContainer {
+  
+  /* border: 1px solid red; */
+ 
+  /* overflow-y: scroll; */
+}
+
+.campaignGrid--invoices {
+
+}
+
+.indCampaignRow {
+  color: #ECE6DA; 
+  padding: 0.8rem 1rem;
+  background: #181526;
+  font-size: 14px;
+  margin-top: 0.5rem;
+
+}
+.campaignStatusColumn {
+  place-self: center;
+  /* width: 100%; */
+}
+
+.campaignStatusButton {
+  width: min(100%, 85px);
+  margin: 0 1rem;
+  padding: .2rem 0;
+  /* background: #ECE4B7; */
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pendingStatus {
+  background: #ECE4B7;
+}
+
+.approvedStatus {
+  background: #43AA8B;
+}
+
+.inProgressStatus {
+  background: #7C3626;
+  color: #ECE6DA;
+}
+
+.completedStatus {
+  background: #BB883A;
+}
+
+
+.invoices {
+  /* border: 1px solid yellow; */
+  /* height: 100%; */
+  /* min-height: 200px; */
+  /* overflow-y: hidden; */
+  flex: 1 1 auto; /* Allow the last block to grow and fill remaining space */
+  display: flex; /* Use flexbox for the last block */
+  flex-direction: column;
+}
+
+.invoices-inner {
+
+
+  /* Allow the last block to grow and fill remaining space */
+  /* flex: 1; */
+
+  overflow: hidden;
+  display: flex; /* Use flexbox for the last block */
+  flex-direction: column; /* Stack inner content vertically */
+  /* overflow: hidden; */
+  /* max-height: 100%; */
+  /* height: fit-content;
+  max-height: calc(100vh - 500px) */
+}
+
+.campaigns {
+  /* min-height: 200px;
+  max-height: 100%; */
+  /* height: min(200px, 100%); */
+  /* height: 200px;
+  height: 100%; */
+  flex: 1;
+  overflow-y: scroll;
+  /* border: 1px solid red; */
+  padding-bottom: 0.5rem;
+  /* min-height: 200px;
+  max-height: 100%; */
+  
+}
+
+
+.block {
+  flex: 0 0 auto; /* Prevent blocks from growing */
+  /* background-color: #f0f0f0;  */
+  /* Example background color */
+  overflow: hidden; /* Hide overflow from blocks */
+  /* Add any other styles as needed */
+}
+
+
+
+.block:last-child {
+  flex: 0 1 content; 
+  /* Allow the last block to grow and fill remaining space */
+  display: flex; /* Use flexbox for the last block */
+  flex-direction: column; /* Stack inner content vertically */
+  /* max-height: calc(100vh - 600px); */
+  max-height: fit-content;
+  min-height: fit-content;
+}
+
+.inner-block {
+  flex: 1; 
+  /* Allow the inner block to grow and take up remaining space */
+  overflow: hidden; /* Hide overflow from the inner block */
+  display: flex; /* Use flexbox for the inner block */
+  flex-direction: column; /* Stack inner content vertically */
+}
+
+.inner-inner-scrollable {
+  /* padding-left: 3rem; */
+  /* flex: 1; */
+   /* Allow the inner scrollable content to grow and take up remaining space */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  /* padding-right: 5px;
+  margin: 2px; */
+}
+
+.label-dropdown {
+  display: block;
+  /* padding-top: 1rem; */
+  padding-bottom: 0.5rem;
+  color: #ECE6DA;
+  color: #75726B;
+  font-weight: 600;
+  font-size: 14px;
+
+}
+
+.dropdown-wrapper {
+  /* border: 1px solid red; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-end; */
+  /* flex: 1 0 auto; */
+  margin-left: auto;
+  width: max(100px, 15%);
+  padding-right: 5px;
+  padding-bottom: 10px;
+
+ 
+}
+
+
+.hh {
+  outline: 2px solid rgba(187, 136, 58, 0.5);
+  color: #ECE6DA;
+  font-size: 14px;
+}
+.MuiSvgIcon-root {
+  color: #BB883A !important;
+}
+
+.MuiMenuItem-root {
+  /* font-size: '5px' !important; */
+}
+
+.ff {
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+
