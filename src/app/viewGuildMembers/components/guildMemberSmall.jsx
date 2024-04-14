@@ -12,6 +12,7 @@ export default function GuildMemberSmall({memberData}) {
                 src={memberData.imageLink}
                     width={70}
                     height={70} 
+                    alt={memberData.name}
             />
         </div>
         <div className={styles.innerContainer}>

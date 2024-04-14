@@ -1,0 +1,225 @@
+.profileWrapper {
+    padding: 1rem;
+    width: calc(100% - 1rem);
+    min-height: calc(100vh - 64px);
+    height: calc(100vh - 64px);
+    overflow: auto;
+
+    max-width: 425px;
+  
+  }
+
+.profileImage {
+
+}
+
+.nameHeader {
+    margin-bottom: 1rem;
+    color: var(--clr-accent-red);
+    font-size: var(--page-header-text);
+    font-weight: 300;
+    font-family: var(--font-cinzel);
+}
+
+.profileStatsContainerTop {
+    margin-left: .75rem;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.profileStatsSubContainerTop:not(:first-child) {
+    margin-top: 14px;
+} 
+
+.profileStatsStatistic {
+    color: var(--clr-light-100);
+    font-size: 16px;
+    line-height: 1;
+    font-family: var(--font-cinzel);
+}
+
+.profileStatsHeader {
+    color: #6a7587;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: var(--font-cinzel);
+}
+
+.profileBtnHire,
+.profileBtnReturn {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 14px;
+    font-family: var(--font-cinzel);
+    text-decoration: none;
+    color: var(--clr-light-100);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    }
+
+.profileBtnHire {
+    background: var(--clr-accent-red);
+}
+
+.profileBtnReturn {
+     background: #14101F;
+}
+
+.profileContainerStatsAndBio {
+    margin-top: 1.5rem;
+}
+
+.profileStatsNumericalContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.profileBiographyContainer {
+    font-family: var(--font-roboto);
+    font-size: 0.875rem;
+    /* color: #CCDFFE;  */
+    color: #737f93; 
+    opacity: 1;
+    /* font-weight: 400; */
+}
+  
+.profileBiographyContainer  {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+  
+.profileBiographyContainer  p:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.profileProficienciesContainer {
+
+}
+  
+.profileProficienciesContainer h2 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    color: #CCDFEE;
+    font-family: var(--font-cinzel);
+}
+  
+.profileProficienciesContainer h2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--clr-accent-red);
+    bottom: 0;
+    left: 0;
+    opacity: .7;
+}
+  
+.profileProficienciesContainer h3 {
+    color: #737f93;
+    font-size: 16px;
+    font-family: var(--font-cinzel);
+    font-weight: 300;
+}
+
+.profileProficienciesListsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.profileProficienciesList {
+    color: #737f93;
+    padding-top: .1rem;
+    padding-bottom: 1rem;
+    font-size: 14px;
+    /* padding-left: .5rem; */
+    font-family: var(--font-roboto);
+}
+  
+.profileProficienciesList li {
+    
+}
+
+.profileAbilityScoresContainer {
+    width: 100%;
+    /* max-width: 300px; */
+    border-radius: 5px;
+    background: #14101F;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileAbilityScoresHeader {
+    margin-top: 1rem;
+    font-size: 1.75rem;
+    font-family: var(--font-cinzel);
+    /* text-transform: uppercase; */
+    color: #CCDFFE;
+    font-weight: 300;
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
+.profileAbilityScoreContainer {
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #CCDFFE;
+    font-family: var(--font-cinzel);
+    padding: .5rem 1rem .3rem 1rem;
+    line-height: 1;
+    -webkit-box-shadow: 0px 4px 15px 4px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 15px 4px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.25);
+  }
+  
+  .profileAbilityScoreContainer::before,
+  .profileAbilityScoreContainer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    background: #CCDFFE;
+    opacity: .1;
+  }
+  
+  .profileAbilityScoreContainer::before {
+    top: 0;
+  }
+  
+  .profileAbilityScoreContainer::after {
+    bottom: 0;
+  }
+
+  .profileAbilityScore {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .profileAbilityScoreHeader {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .profileAbilityScoreModifier {
+    font-size: 16px;
+    text-align: right;
+  }

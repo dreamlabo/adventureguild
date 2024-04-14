@@ -7,7 +7,7 @@ export default async function ViewGuildMembers() {
     const renderGuildMembers = () => {
         return guildMemberData.map(member => {
             console.log(member)
-            return <GuildMemberSmall memberData={member}/>
+            return <GuildMemberSmall key={member.name} memberData={member}/>
         }
     )
 }

@@ -1,50 +1,52 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from "./page.module.css"
 
 export default function GuildMemberProfile() {
   return (
-        <section className='bio--main-wrapper'>
-            <h1>Kaldor Ironheart</h1>
-            <Image className='bio-image'
+        <section className={styles.profileWrapper}>
+            <h1 className={styles.nameHeader}>Kaldor Ironheart</h1>
+            <Image className={styles.profileImage}
                 src="/assets/images/guildMemberImages/Kaldor_Ironheart.jpg"
                         width={170}
                         height={170} 
+                        alt="Kaldor Ironheart"
             />
-            <div className='bio-stats-one'>
-                <div className='bio--stats-sub-container'>
-                    <p className='bio--stats-statistic'>Fighter</p>
-                    <h2 className='bio--stats-header'>Class & Level</h2>
+            <div className={styles.profileStatsContainerTop}>
+                <div className={styles.profileStatsSubContainerTop}>
+                    <p className={styles.profileStatsStatistic}>Fighter</p>
+                    <h2 className={styles.profileStatsHeader}>Class & Level</h2>
                 </div>
-                <div className='bio--stats-sub-container'>
-                    <p className='bio--stats-statistic'>Human</p>
-                    <h2 className='bio--stats-header'>Race</h2>
+                <div className={styles.profileStatsSubContainerTop}>
+                    <p className={styles.profileStatsStatistic}>Human</p>
+                    <h2 className={styles.profileStatsHeader}>Race</h2>
                 </div>
-                <div className='bio--stats-sub-container'>
-                    <p className='bio--stats-statistic'>Chaotic Neutral</p>
-                    <h2 className='bio--stats-header'>Alignment</h2>
+                <div className={styles.profileStatsSubContainerTop}>
+                    <p className={styles.profileStatsStatistic}>Chaotic Neutral</p>
+                    <h2 className={styles.profileStatsHeader}>Alignment</h2>
                 </div>
-                <Link className="btn-hire" href="/user/hire">Hire Kaldor</Link>
+                <Link className={styles.profileBtnHire} href="/user/hire">Hire Kaldor</Link>
             </div>
-            <div className='bio--container--stats-and-bio'>
-                <div className='bio--stats-numerical-container'>
+            <div className={styles.profileContainerStatsAndBio}>
+                <div className={styles.profileStatsNumericalContainer}>
                     <div>
-                        <p className='bio--stats-statistic'>12</p>
-                        <h2 className='bio--stats-header'>Armor Class</h2>
+                        <p className={styles.profileStatsStatistic}>12</p>
+                        <h2 className={styles.profileStatsHeader}>Armor Class</h2>
                     </div>
                     <div>
-                        <p className='bio--stats-statistic' >18</p>
-                        <h2 className='bio--stats-header'>Hit Points</h2>
+                        <p className={styles.profileStatsStatistic} >18</p>
+                        <h2 className={styles.profileStatsHeader}>Hit Points</h2>
                     </div>
                     <div>
-                        <p className='bio--stats-statistic'>450</p>
-                        <h2 className='bio--stats-header'>Exp Points</h2>
+                        <p className={styles.profileStatsStatistic}>450</p>
+                        <h2 className={styles.profileStatsHeader}>Exp Points</h2>
                     </div>
                     <div>
-                        <p className='bio--stats-statistic'>45</p>
-                        <h2 className='bio--stats-header'>Speed</h2>
+                        <p className={styles.profileStatsStatistic}>45</p>
+                        <h2 className={styles.profileStatsHeader}>Speed</h2>
                     </div>
                 </div>
-                <div className='bio--biography-container'>
+                <div className={styles.profileBiographyContainer}>
                     <p>
                         Kaldor Ironheart hails from the distant mountain kingdom of Durakor, 
                         known for its skilled warriors and formidable fortresses. 
@@ -52,7 +54,7 @@ export default function GuildMemberProfile() {
                         and prowess in combat. His family, respected blacksmiths 
                         in the kingdom, crafted the finest weapons and armor, 
                         instilling a deep appreciation for craftsmanship in Kaldor.
-                        </p>
+                    </p>
                     <p>
                         Kaldor Ironheart hails from the distant mountain kingdom of 
                         Durakor, known for its skilled warriors and formidable 
@@ -71,32 +73,32 @@ export default function GuildMemberProfile() {
                     </p>
                 </div>
             </div>
-            <div className='bio--proficiencies-container'>
+            <div className={styles.profileProficienciesContainer}>
                 <h2 >Proficiencies</h2>
-                <div className='bio--proficiencies-lists-container'>
+                <div className={styles.profileProficienciesListsContainer}>
                     <div>
                         <h3>Armor</h3>
-                        <ul className='bio--proficiencies-list'>
+                        <ul className={styles.profileProficienciesList}>
                             <li>All Armor</li>
                             <li>All Shields</li>
                         </ul>
                     </div>
                     <div>
                         <h3>Weapons</h3>
-                        <ul className='bio--proficiencies-list'>
+                        <ul className={styles.profileProficienciesList}>
                             <li>Simple Weapons</li>
                             <li>Martial Weapons</li>
                         </ul>
                     </div>
                     <div>
                         <h3>Tools</h3>
-                        <ul className='bio--proficiencies-list'>
+                        <ul className={styles.profileProficienciesList}>
                             <li>None</li>
                         </ul>
                     </div>
                     <div>
                         <h3>Saving Throws</h3>
-                        <ul className='bio--proficiencies-list'>
+                        <ul className={styles.profileProficienciesList}>
                             <li>Strength</li>
                             <li>Constitution</li>
                         </ul>
@@ -104,60 +106,61 @@ export default function GuildMemberProfile() {
                 </div>
             </div>
             <div className='bio--ability-scores-wrapper'>
-                <div className='bio--ability-scores-container'>
-                    <Image className='icon--20-sided-dice'
-                            src="/images/icons/20-sided-dice.svg"
-                            width={40}
-                            height={40} 
+                <div className={styles.profileAbilityScoresContainer}>
+                    <Image
+                        src="/assets/icons/20-sided-dice.svg"
+                        width={40}
+                        height={40} 
+                        alt="twenty sided dice"
                     />
-                    <h2 className='bio--ability-scores-header'>Ability Scores</h2>
-                    <div className='bio--ability-score-container'>
-                        <p className='bio--ability-score'>14</p>
+                    <h2 className={styles.profileAbilityScoresHeader}>Ability Scores</h2>
+                    <div className={styles.profileAbilityScoreContainer}>
+                        <p className={styles.profileAbilityScore}>14</p>
                         <div>
-                            <h3 className='bio--ability-score-header'>Strength</h3>
-                            <p className='bio--ability-score-modifier'>+4</p>
+                            <h3 className={styles.profileAbilityScoreHeader}>Strength</h3>
+                            <p className={styles.profileAbilityScoreModifier}>+4</p>
                         </div>
                     </div>
-                    <div className='bio--ability-score-container'>
-                        <p className='bio--ability-score'>16</p>
+                    <div className={styles.profileAbilityScoreContainer}>
+                        <p className={styles.profileAbilityScore}>16</p>
                         <div>
-                            <h3 className='bio--ability-score-header'>Dexterity</h3>
-                            <p className='bio--ability-score-modifier'>+3</p>
+                            <h3 className={styles.profileAbilityScoreHeader}>Dexterity</h3>
+                            <p className={styles.profileAbilityScoreModifier}>+3</p>
                         </div>
                     </div>
-                    <div className='bio--ability-score-container'>
-                        <p className='bio--ability-score'>11</p>
+                    <div className={styles.profileAbilityScoreContainer}>
+                        <p className={styles.profileAbilityScore}>11</p>
                         <div>
-                            <h3 className='bio--ability-score-header'>Constitution</h3>
-                            <p className='bio--ability-score-modifier'>+3</p>
+                            <h3 className={styles.profileAbilityScoreHeader}>Constitution</h3>
+                            <p className={styles.profileAbilityScoreModifier}>+3</p>
                         </div>
                     </div>
-                    <div className='bio--ability-score-container'>
-                        <p className='bio--ability-score'>13</p>
+                    <div className={styles.profileAbilityScoreContainer}>
+                        <p className={styles.profileAbilityScore}>13</p>
                         <div>
-                            <h3 className='bio--ability-score-header'>Intelligence</h3>
-                            <p className='bio--ability-score-modifier'>+3</p>
+                            <h3 className={styles.profileAbilityScoreHeader}>Intelligence</h3>
+                            <p className={styles.profileAbilityScoreModifier}>+3</p>
                         </div>
                     </div>
-                    <div className='bio--ability-score-container'>
-                        <p className='bio--ability-score'>16</p>
+                    <div className={styles.profileAbilityScoreContainer}>
+                        <p className={styles.profileAbilityScore}>16</p>
                         <div>
-                            <h3 className='bio--ability-score-header'>Wisdom</h3>
-                            <p className='bio--ability-score-modifier'>+3</p>
+                            <h3 className={styles.profileAbilityScoreHeader}>Wisdom</h3>
+                            <p className={styles.profileAbilityScoreModifier}>+3</p>
                         </div>
                     </div>
-                    <div className='bio--ability-score-container'>
-                        <p className='bio--ability-score'>13</p>
+                    <div className={styles.profileAbilityScoreContainer}>
+                        <p className={styles.profileAbilityScore}>13</p>
                         <div>
-                            <h3 className='bio--ability-score-header'>Charisma</h3>
-                            <p className='bio--ability-score-modifier'>+3</p>
+                            <h3 className={styles.profileAbilityScoreHeader}>Charisma</h3>
+                            <p className={styles.profileAbilityScoreModifier}>+3</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <Link className="bio--btn-hire" href="/">Hire Kaldor</Link>
-                <Link className="bio--btn-return" href="/">Return To Guild</Link>
+                <Link className={styles.profileBtnHire} href="/">Hire Kaldor</Link>
+                <Link className={styles.profileBtnReturn} href="/">Return To Guild</Link>
             </div>
         </section>
   )

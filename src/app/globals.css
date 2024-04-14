@@ -11,6 +11,8 @@ body {
 }
 
 :root {
+
+  --page-header-text: 1.5rem;
   --clr-light-100: #ECE6DA;
   --clr-accent-primary: #BB883A;
   --clr-accent-primary-rgb: rgb(187, 136, 58);
