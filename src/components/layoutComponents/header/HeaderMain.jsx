@@ -17,6 +17,7 @@ export default async function HeaderMain() {
       <header className={style.headerContainerMain}>
           <Link href="/" className={style.headerLogoMain}>Adventure Guild</Link>
           <nav className={style.headerContainerNav}>
+            <Link className={style.navLink}  href="/viewGuildMembers">View Guild</Link>
           <AuthLinks/>
           </nav>
       </header>

@@ -57,7 +57,7 @@ li {
 .right-side-inner-wrapper {
  
   padding: 1rem;
-  width: calc(100% - 3rem);
+  width: calc(100% - 1rem);
   min-height: calc(100vh - 64px);
   height: calc(100vh - 64px);
   overflow: hidden;
@@ -428,7 +428,7 @@ li {
 
 .page-title-text {
   color: var(--clr-accent-primary);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   font-family: var(--font-roboto);
   text-transform: uppercase;

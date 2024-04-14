@@ -90,7 +90,7 @@ export default function CampaignInvoices() {
                     <div className="campaignGrid indCampaignRow">
                         <p>123456789</p>
                         <button className="campaignStatusColumn campaignStatusButton pendingStatus">Pending</button>
-                        <p>Reason for Adventure</p>
+                        <p>Reclaim the Dragonlance</p>
                         <p>Thorbardin</p>
                         <p>12gp</p>
                         <p>Feb 12, 2024</p>
