@@ -6,7 +6,7 @@ export const invoices = [
         location: 'Abanasinia',
         payment: 20 ,
         startDate: '2023-12-23',
-        endDate: '2023-15-23',
+        endDate: '2023-12-25',
         hiredBy: 'Lira Shadowstep',
     },
     {
@@ -22,7 +22,7 @@ export const invoices = [
     {
         id: '8958745',
         status: 'In Progress',
-        reason: 'Investigate mysterious occurrences.',
+        reason: 'Investigate mysterious occurrences: Strange phenomena, disappearances, or sightings of supernatural creatures prompt the client to hire an investigator to uncover the truth.',
         location: 'Thorbardin',
         payment: 54 ,
         startDate: '2024-04-07',
@@ -47,7 +47,7 @@ export const invoices = [
         payment: 23,
         startDate: '2024-07-07',
         endDate: '2024-07-07',
-        hiredBy: '',
+        hiredBy: 'Evelyn Swiftarrow',
     },
     {
         id: '16985854258',
