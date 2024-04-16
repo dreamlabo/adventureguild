@@ -50,7 +50,7 @@ export default function GuildMemberProfile() {
                         <ProfileImage width={250} height={250}/>
                         <AbilityScores/>
                     </div>
-                    <div>
+                    <div className={styles.paddingTopSmall}>
                         <BasicInfoDisplay showButton={false}/>
                         <BasicNumericalInfoDisplay/>
                         <Biography/>

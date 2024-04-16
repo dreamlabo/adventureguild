@@ -5,7 +5,7 @@ export default function ButtonContainer() {
   return (
     <div className={styles.buttonContainer}>
         <Link className={styles.profileBtnHire} href="/">Hire Kaldor</Link>
-        <Link className={styles.profileBtnReturn} href="/">Return To Guild</Link>
+        <Link className={styles.profileBtnReturn} href="/viewGuildMembers">Return To Guild</Link>
     </div>
   )
 }

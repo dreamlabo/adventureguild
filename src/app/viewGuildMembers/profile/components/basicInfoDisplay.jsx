@@ -6,7 +6,10 @@ export default function BasicInfoDisplay({showButton}) {
   return (
     <div className={styles.profileStatsContainerTop}>
         <div className={styles.profileStatsSubContainerTop}>
-            <p className={styles.profileStatsStatistic}>Barbarian</p>
+            <div className={styles.classLevelContainer}>
+              <p className={styles.profileStatsStatistic}>Barbarian</p>
+              <p className={styles.profileStatsStatistic}>3rd</p>
+            </div>
             <h2 className={styles.profileStatsHeader}>Class & Level</h2>
         </div>
         <div className={styles.profileStatsSubContainerTop}>

@@ -573,13 +573,20 @@ li {
 }
 
 .indCampaignRow {
+  text-decoration: none;
   color: #ECE6DA; 
   padding: 0.8rem 1rem;
   background: #181526;
   font-size: 14px;
   margin-top: 0.5rem;
-
+  border-radius: 5px;
 }
+
+.indCampaignRow:hover {
+  background: #1a1728;
+}
+
+
 .campaignStatusColumn {
   place-self: center;
   /* width: 100%; */
@@ -593,10 +600,12 @@ li {
   border: 1px solid transparent;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
 }
 
 .pendingStatus {
   background: #ECE4B7;
+  color: black;
 }
 
 .approvedStatus {

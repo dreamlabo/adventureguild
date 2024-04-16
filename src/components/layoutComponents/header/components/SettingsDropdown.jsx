@@ -3,7 +3,7 @@ import {useEffect, useRef } from 'react'
 import style from '../header.module.css';
 import Link from 'next/link';
 
-export default function SettingsDropdown({closeMenu}) {
+export default function SettingsDropdown({closeMenu, userName, userEmail}) {
     let dropdownRef = useRef();
 
     const handleClickOutside = (event) => {
@@ -37,8 +37,8 @@ export default function SettingsDropdown({closeMenu}) {
                     <div className={style.userInfoContainer}>
                         <div className={style.userInfoIcon}>T</div>
                         <div className={style.userInfoTextContainer}>
-                            <p className={style.usernameText}>username</p>
-                            <p className={style.emailText}>username@mail.com</p>
+                            <p className={style.usernameText}>{userName}</p>
+                            <p className={style.emailText}>{userEmail}</p>
                         </div>
                     </div>
                 </div>

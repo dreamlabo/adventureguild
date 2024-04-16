@@ -8,6 +8,8 @@ import Link from "next/link";
 import WizardImage from '../../../public/assets/images/wizard-juggling.jpg';
 import { PiWarningCircleLight } from "react-icons/pi";
 
+
+
 export default function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -22,7 +24,7 @@ export default function SignIn() {
     const res = await signIn("credentials", {
             email,
             password,
-            callbackUrl: '/',
+            callbackUrl: '/guildmember/dashboard/overview',
             redirect: false
           });
       
@@ -32,8 +34,8 @@ export default function SignIn() {
           }
 
         if (res?.ok) {
-          router.refresh();
-          router.push(res.url)
+            router.refresh();
+            router.push(res.url)
         }
     };
 

@@ -1,8 +1,21 @@
-
+'use client'
+import { useState } from 'react';
+import Link from 'next/link';
 import Box from '@mui/material/Box';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+
+import { invoices } from '../../../../fakeData/invoices'
+
 export default function CampaignInvoices() {
+    const [invoiceStatus, setInvoiceStatus] = useState(10);
+
+    const handleChange = (event) => {
+        setInvoiceStatus(event.target.value)
+    }
+
+    
+
   return (
     // block (last-child)
     <section className="campaignInvoicesWrapper block">
@@ -12,26 +25,16 @@ export default function CampaignInvoices() {
             {/* h2 */}
             <div className='ff'>
             <h2 className="overview-components-header">Campaigns</h2>
-            {/* p */}
-            {/* <div className="campaignDropdownContainer">
-                <select className="campaignDropdown" name="" id="">
-                    <option value="">All</option>
-                    <option value="">Pending</option>
-                    <option value="">Approved</option>
-                    <option value="">In Progress</option>
-                    <option value="">Completed</option>
-                </select>
-            </div> */}
-
+            
             <div className='dropdown-wrapper'>
              
                     <label className="label-dropdown" htmlFor="">SORT BY</label>
-                    <Box  sx={{ minWidth: 120, maxWidth: 500,  borderRadius: 1 }}>
+                    <Box sx={{ minWidth: 120, maxWidth: 500,  borderRadius: 1 }}>
                         <Select size="small" className="hh" fullWidth
                        
                             displayEmpty
-                            // value={age}
-                            // onChange={handleChange}
+                            value={invoiceStatus}
+                            onChange={handleChange}
                             MenuProps={{
                                 PaperProps: {
                                     sx: {
@@ -56,13 +59,11 @@ export default function CampaignInvoices() {
                                         },
                                         '& .MuiSvgIcon-root': {
                                             color: '#BB883A',
-                                           
                                         },
                                     },
                                 },
                             }}
                             >
-                               
                             <MenuItem value={10}>All</MenuItem>
                             <MenuItem value={20}>Pending</MenuItem>
                             <MenuItem value={30}>Approved</MenuItem>
@@ -86,8 +87,20 @@ export default function CampaignInvoices() {
                     <h3>End</h3>
                     <h3>Hired By</h3>
                 </div>
-                <div className="campaigns inner-inner-scrollable">
-                    <div className="campaignGrid indCampaignRow">
+                <ul className="campaigns inner-inner-scrollable">
+                    <li>
+                        <Link href='' className="campaignGrid indCampaignRow">
+                            <p>123456789</p>
+                            <p className="campaignStatusColumn campaignStatusButton pendingStatus">Pending</p>
+                            <p>Reclaim the Dragonlance</p>
+                            <p>Thorbardin</p>
+                            <p>12gp</p>
+                            <p>Feb 12, 2024</p>
+                            <p>Feb 16, 2024</p>
+                            <p>Lira Shadowstep</p>
+                        </Link>
+                    </li>
+                    {/* <div className="campaignGrid indCampaignRow">
                         <p>123456789</p>
                         <button className="campaignStatusColumn campaignStatusButton pendingStatus">Pending</button>
                         <p>Reclaim the Dragonlance</p>
@@ -186,8 +199,8 @@ export default function CampaignInvoices() {
                         <p>Feb 12, 2024</p>
                         <p>Feb 16, 2024</p>
                         <p>Lira Shadowstep</p>
-                    </div>
-                </div>  
+                    </div> */}
+                </ul>  
             </div>
         </div>
     </section>
