@@ -33,8 +33,8 @@ export default function InvoiceListItem({invoice}) {
   }
 
   return (
-    <li key={invoice.id}>
-      <Link href='' className="campaignGrid indCampaignRow">
+    <li>
+      <Link href='/guildmember/contracts/1234545329' className="campaignGrid indCampaignRow">
           <p className='invoiceIdColumn'>{invoice.id}</p>
           <p className={applyClassNameToStatus(invoice.status)}>{invoice.status}</p>
           <p className="invoiceReason">{invoice.reason}</p>

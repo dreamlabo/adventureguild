@@ -191,7 +191,7 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 590px) {
     .innerGrid {
         grid-template-columns: 1fr;
         /* [level] minmax(130px, 1fr)  */
@@ -204,7 +204,7 @@
     }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 500px) {
     .indGuildMemberContainer {
         grid-template-columns: 1fr;
     }

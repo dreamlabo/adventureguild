@@ -3,11 +3,13 @@ export const invoices = [
         id: '1234545329',
         status: 'Pending',
         reason: 'Escort through dangerous territory',
+        description: "The client needs protection while traveling through treacherous lands infested with monsters, bandits, or other hostile forces.",
         location: 'Abanasinia',
         payment: 20 ,
         startDate: '2023-12-23',
         endDate: '2023-12-25',
         hiredBy: 'Lira Shadowstep',
+        hiredByEmail: 'lirashadowstep@mail.com',
     },
     {
         id: '4578154',

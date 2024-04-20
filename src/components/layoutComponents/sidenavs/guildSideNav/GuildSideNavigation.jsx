@@ -26,6 +26,10 @@ export default function GuildSideNavigation() {
     <>
         {session?.user?.roles[1] === "guild"  &&  
                         <div className={`side-nav-wrapper ${isSideBarOpen ? '': 'side-nav-wrapper--mobile'}` }>
+                            <div className='side-wrapper-container'>
+
+                        
+                            
                             <div className='side-nav--toggle-btn'>
                                 <button>
                                     <CgMenuRight 
@@ -48,7 +52,7 @@ export default function GuildSideNavigation() {
                                     <li>
                                         <Link className='link' href="/user">
                                         <div className='icon-container'>
-                                            <GrMailOption  size={18} style={{marginRight: "1rem"}}/>
+                                            <GrMailOption size={18} style={{marginRight: "1rem"}}/>
                                         
                                             <span className='span-text'>Messages</span>
                                             </div>
@@ -68,6 +72,7 @@ export default function GuildSideNavigation() {
                                     </li>
                                 </ul>
                             </nav>
+                        </div>
                         </div>
         }
     </>
