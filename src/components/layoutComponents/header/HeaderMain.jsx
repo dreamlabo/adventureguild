@@ -9,9 +9,6 @@ import AuthLinks from './authLinks';
 // import "../app/globals.css"
 
 export default async function HeaderMain() {
-
- 
-  // console.log("Session lkbkjbkbkb: ", session)
   return (
     <div className={style.headerMainWrapper}>
       <header className={style.headerContainerMain}>

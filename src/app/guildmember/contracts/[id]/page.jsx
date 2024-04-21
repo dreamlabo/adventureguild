@@ -14,6 +14,9 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 import { BiMessageAdd } from "react-icons/bi";
 
+import { convertDate } from '@/utils/convertDate';
+import { setStatusButtonColor } from '@/utils/setStatusButtonColor';
+
 import { invoices } from '../../../../fakeData/invoices'
 
 export default function Contract({params}) {
@@ -53,7 +56,7 @@ const invoice = invoices.find(p => p.id === id)
                     <div className={styles.invoiceDetailsContainer}>
                         <div >
                             <label className={styles.detailsLabel} htmlFor="">Status</label>
-                            <button className={styles.statusButton}>{invoice.status}<FaChevronDown style={{marginLeft: '10px'}} /></button>
+                            <button className={`${styles.statusButton} ${setStatusButtonColor(invoice.status)}`}>{invoice.status}<FaChevronDown style={{marginLeft: '10px'}} /></button>
                         </div>
                         <div className={styles.timelineContainer}>
                             <IoCalendarClearOutline className={styles.icon} size={20}  />
@@ -62,11 +65,11 @@ const invoice = invoices.find(p => p.id === id)
                             <div className={styles.timelineDetailsWrapper}>
                                 <div className={styles.timelineDetailsContainer}>
                                     <h4 className={styles.timelineLabel}>Start</h4>
-                                    <time className={styles.timelineStat}>Apr 30, 2024</time>
+                                    <time className={styles.timelineStat}>{convertDate(invoice.startDate)}</time>
                                 </div>
                                 <div className={styles.timelineDetailsContainer}>
                                     <h4 className={styles.timelineLabel}>End</h4>
-                                    <time className={styles.timelineStat}>May 3, 2024</time>
+                                    <time className={styles.timelineStat}>{convertDate(invoice.endDate)}</time>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +98,7 @@ const invoice = invoices.find(p => p.id === id)
                     <div className={styles.notesContainer}>
                         <div className={styles.notesHeader}>
                             <PiNotePencilDuotone className={styles.noteIcon}  size={25}/>
-                            <button className={styles.newBtn}><span>New Note</span><MdOutlineNoteAdd size={20} /></button>
+                            <button className={styles.newBtn}>New Note</button>
                         </div>
                         <div className={styles.sortIcon}>
                             <FaSortAmountUp className={styles.icon} size={20}/>
@@ -159,11 +162,7 @@ const invoice = invoices.find(p => p.id === id)
                         <time>Feb 12, 2024 at 5:15pm</time>
                         <h3>Message Subject</h3>
                         <p className={styles.messageText}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore 
-                            magna aliqua. Ut enim ad minim  veniam, quis nostrud 
-                            exercitation ullamco laboris nisi ut aliquip ex ea 
-                            commodo consequat.
+                        The client needs protection while traveling through treacherous lands infested with monsters, bandits, or other hostile forces.
                         </p>
                     </div> 
                 </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { convertDate } from '@/utils/convertDate';
 
 export default function InvoiceListItem({invoice}) {
 
@@ -34,14 +35,14 @@ export default function InvoiceListItem({invoice}) {
 
   return (
     <li>
-      <Link href='/guildmember/contracts/1234545329' className="campaignGrid indCampaignRow">
+      <Link href={`/guildmember/contracts/${invoice.id}`} className="campaignGrid indCampaignRow">
           <p className='invoiceIdColumn'>{invoice.id}</p>
           <p className={applyClassNameToStatus(invoice.status)}>{invoice.status}</p>
           <p className="invoiceReason">{invoice.reason}</p>
           <p>{invoice.location}</p>
           <p>{invoice.payment}gp</p>
-          <p>{formatDate(invoice.startDate)}</p>
-          <p>{formatDate(invoice.endDate)}</p>
+          <p>{convertDate(invoice.startDate)}</p>
+          <p>{convertDate(invoice.endDate)}</p>
           <p>{invoice.hiredBy}</p>
       </Link>
     </li>
